@@ -1,7 +1,3 @@
-"""
-This can all be replaced with simpler logic using normalizeCenters 
-            IF it works consistently
-"""
 
 #Centers argument should be passed a list of 4 nearest neighbors NOT entire list of centers
 def findNeighbor(tile, avgTileLen, centers):

@@ -3,7 +3,9 @@ unAnnotatedImages/
 Scanananagrams.yolov8/
 runs/
 *.pt
-
+cnnTraining/whole_images/
+cnnTraining/testing_data/
+cnnTraining/training_data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
