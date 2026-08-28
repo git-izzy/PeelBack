@@ -1,3 +1,8 @@
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from .TileInfo import TileInfo
+
 class TileNeighbors():
 
     def __init__(self,tileDict : dict = None, up=None, right=None, down=None, left=None):
@@ -24,13 +29,16 @@ class TileNeighbors():
     def removeNeighbor(self,key):
         self[key] = None    
 
-    def __getitem__(self, key):
+    def __getitem__(self, key) ->'TileInfo':
         target = self.neighbors[ self.findTargetKey(key) ]
         return target
 
     def __setitem__(self, key, value):
         targetKey = self.findTargetKey(key)
         self.neighbors[targetKey] = value
+
+    def __str__(self):
+        return f"Neighbors: 'up': {self.neighbors['up']}, \'down\': {self.neighbors['down']} \'left\': {self.neighbors['left']}, \'right\': {self.neighbors['right']}"
 
     
 
